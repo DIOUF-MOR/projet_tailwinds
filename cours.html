@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=list_alt" />
+    <title>Gestion des cours et absences</title>
+</head>
+
+<body class="flex h-screen bg-gray-100">
+    <!-- Sidebar -->
+    <div class="flex flex-col w-64 bg-blue-800 text-white h-full">
+        <!-- Logo -->
+        <div class="p-4 text-center font-extrabold text-lg border-b border-blue-700">
+            ECOLE <span class="text-red-600">221</span>
+        </div>
+        <!-- Navigation -->
+        <nav class="flex-grow">
+            <a href="#" class="block py-3 px-4 flex hover:bg-blue-700">
+                <span class="material-symbols-outlined">
+                    list_alt
+                </span>Listes des cours</a>
+            <a href="#" class="block py-3 px-4 flex hover:bg-blue-700">
+                <span class="material-symbols-outlined">
+                    list_alt
+                </span>Listes des absences</a>
+        </nav>
+        <!-- Footer -->
+        <div class="p-4 border-t border-blue-700 text-sm text-center">
+            <button class="bg-red-600 px-4 py-2 font-bold rounded hover:bg-red-700">
+                Déconnexion
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-grow p-1 overflow-auto">
+        <header class="w-full rounded-b-lg bg-blue-800 text-white p-4 flex items-center justify-between">
+            <h1 class="text-xl font-bold">Mon Application</h1>
+            <div class="bg-red-600 px-6 py-6 rounded-full">
+                <!-- <img src="profil.png" alt="" class="w-full h-full object-cover"> -->
+            </div>
+        </header>
+        <div class="p-6">
+            <p class="text-right">Année scolaire : 2024-2025</p>
+            <h1 class="text-2xl font-bold mb-4">Liste des cours</h1>
+            <!-- Input Select -->
+            <div class="mb-4">
+                <label for="filter" class="block text-gray-700 font-medium mb-2">Filtrer par semestre :</label>
+                <select id="filter" class="w-full border border-gray-300 rounded py-2 px-3">
+                    <option value="all">Tous les semestres</option>
+                    <option value="Semestre 1">Semestre 1</option>
+                    <option value="Semestre 2">Semestre 2</option>
+                    <option value="Semestre 3">Semestre 3</option>
+                </select>
+            </div>
+            <!-- Tableau -->
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200">
+                    <thead>
+                        <tr class="bg-blue-100 border-b border-gray-200">
+                            <th class="py-3 px-4 text-left text-gray-700">Module</th>
+                            <th class="py-3 px-4 text-left text-gray-700">Heure de Début</th>
+                            <th class="py-3 px-4 text-left text-gray-700">Heure de Fin</th>
+                            <th class="py-3 px-4 text-left text-gray-700">Séances</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-3 px-4">Symfony</td>
+                            <td class="py-3 px-4">18h 00min</td>
+                            <td class="py-3 px-4">21h 00min</td>
+                            <td class="py-3 px-4"><a href="#" class="text-blue-600 hover:underline">Voir séance</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-3 px-4">UML</td>
+                            <td class="py-3 px-4">18h 00min</td>
+                            <td class="py-3 px-4">21h 00min</td>
+                            <td class="py-3 px-4"><a href="#" class="text-blue-600 hover:underline">Voir séance</a></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4">Java</td>
+                            <td class="py-3 px-4">18h 00min</td>
+                            <td class="py-3 px-4">21h 00min</td>
+                            <td class="py-3 px-4"><a href="#" class="text-blue-600 hover:underline">Voir séance</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
